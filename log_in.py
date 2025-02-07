@@ -7,7 +7,7 @@ def login(u,input_pw):
     if u=="" or input_pw=="":
         return 0 # user or pwd empty
     is_user_available=False
-    con=connect(host="localhost",user='root',password="Joseph1234",database="Cs_project")
+    con=connect(host="localhost",user='root',password="root",database="Cs_project")
     cur=con.cursor()
     cur.execute("select * from auth")
     al=cur.fetchall()
@@ -34,7 +34,7 @@ def login(u,input_pw):
     
 
 def signup(user,pasw):
-    con=connect(host="localhost",user='root',password="Joseph1234",database="Cs_project")
+    con=connect(host="localhost",user='root',password="root",database="Cs_project")
     cur=con.cursor()
     cur.execute("select * from auth")
     al=cur.fetchall()
